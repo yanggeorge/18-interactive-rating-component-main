@@ -1,4 +1,4 @@
-export type Stage = "index" | "quiz" | "final";
+import "@/styles/main.scss";
 
 function App() {
   return <main className="app"></main>;
