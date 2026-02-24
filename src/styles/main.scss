@@ -1,0 +1,75 @@
+:root {
+  /* Colors */
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+
+  /* Grey */
+  --color-grey-50: hsl(220, 33%, 97%);
+  --color-grey-500: hsl(219, 13%, 44%);
+
+  /* Blue */
+  --color-blue-50: hsl(225, 100%, 96%);
+  --color-blue-100: hsl(220, 33%, 95%);
+  --color-blue-300: hsl(215, 47%, 77%);
+  --color-blue-500: hsl(224, 100%, 59%);
+  --color-blue-850: hsl(216, 27%, 31%);
+  --color-blue-900: hsl(216, 25%, 25%);
+  --color-blue-950: hsl(215, 24%, 23%);
+
+  /* Green */
+  --color-green-100: hsl(150, 83%, 93%);
+  --color-green-500: hsl(151, 68%, 52%);
+
+  /* Purple */
+  --color-purple-100: hsl(277, 100%, 95%);
+  --color-purple-600: hsl(277, 91%, 56%);
+
+  /* Orange */
+  --color-orange-50: hsl(26, 100%, 96%);
+  --color-orange-400: hsl(21, 100%, 60%);
+
+  /* Red */
+  --color-red-500: hsl(0, 82%, 63%);
+
+  /* Typography */
+  --text-preset1: 500 144px/100% "Rubik", sans-serif;
+  --text-preset2-medium: 500 64px/100% "Rubik", sans-serif;
+  --text-preset2-light: 300 64px/100% "Rubik", sans-serif;
+  --text-preset3: 500 36px/120% "Rubik", sans-serif;
+  --text-preset4: 500 28px/100% "Rubik", sans-serif;
+  --text-preset5-medium: 500 24px/150% "Rubik", sans-serif;
+  --text-preset5-regular: 400 24px/150% "Rubik", sans-serif;
+  --text-preset6: 400 20px/150% "Rubik", sans-serif;
+  --text-preset1-mobile: 500 88px/100% "Rubik", sans-serif;
+  --text-preset2-medium-mobile: 500 40px/100% "Rubik", sans-serif;
+  --text-preset2-light-mobile: 300 40px/100% "Rubik", sans-serif;
+  --text-preset3-mobile: 500 20px/120% "Rubik", sans-serif;
+  --text-preset4-mobile: 500 18px/100% "Rubik", sans-serif;
+  --text-preset5-mobile: 400 14px/150% "Rubik", sans-serif;
+
+  --spacing-50: 0.25rem; /* 4px */
+  --spacing-100: 0.5rem; /* 8px */
+  --spacing-150: 0.75rem; /* 12px */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-400: 2rem; /* 32px */
+  --spacing-500: 2.5rem; /* 40px */
+  --spacing-600: 3rem; /* 48px */
+  --spacing-700: 3.5rem; /* 56px */
+  --spacing-800: 4rem; /* 64px */
+  --spacing-900: 4.5rem; /* 72px */
+  --spacing-1000: 5rem; /* 80px */
+  --spacing-1400: 7rem; /* 112px */
+  --spacing-1600: 8rem; /* 128px */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html,
+body {
+  font-family: "Rubik", sans-serif;
+  letter-spacing: 0;
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
