@@ -87,7 +87,7 @@
   body {
     @apply antialiased font-default;
     /* Rating Component 通常使用深色背景 */
-    background-color: var(--color-grey-950);
+    background-color: var(--color-black);
     color: var(--color-white);
   }
 
