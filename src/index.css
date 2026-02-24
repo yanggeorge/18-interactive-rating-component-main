@@ -1,1 +1,112 @@
 @import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+
+@theme {
+  /* --- Colors --- */
+  /* v4 会自动生成 bg-grey-50, text-blue-950 等 */
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+
+  --color-grey-50: hsl(220, 33%, 97%);
+  --color-grey-500: hsl(219, 13%, 44%);
+
+  --color-blue-50: hsl(225, 100%, 96%);
+  --color-blue-100: hsl(220, 33%, 95%);
+  --color-blue-300: hsl(215, 47%, 77%);
+  --color-blue-500: hsl(224, 100%, 59%);
+  --color-blue-850: hsl(216, 27%, 31%);
+  --color-blue-900: hsl(216, 25%, 25%);
+  --color-blue-950: hsl(215, 24%, 23%);
+
+  --color-green-100: hsl(150, 83%, 93%);
+  --color-green-500: hsl(151, 68%, 52%);
+
+  --color-purple-100: hsl(277, 100%, 95%);
+  --color-purple-600: hsl(277, 91%, 56%);
+
+  --color-orange-50: hsl(26, 100%, 96%);
+  --color-orange-400: hsl(21, 100%, 60%);
+
+  --color-red-500: hsl(0, 82%, 63%);
+
+  /* --- Spacing --- */
+  /* v4 会自动映射为 p-spacing-400, gap-spacing-100 等 */
+  --spacing-50: 0.25rem;
+  --spacing-100: 0.5rem;
+  --spacing-150: 0.75rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-700: 3.5rem;
+  --spacing-800: 4rem;
+  --spacing-900: 4.5rem;
+  --spacing-1000: 5rem;
+  --spacing-1400: 7rem;
+  --spacing-1600: 8rem;
+
+  /* --- Default Font --- */
+  --font-rubik: "Rubik", sans-serif;
+}
+
+/* --- Typography Logic --- */
+/* 保持在 :root 中处理响应式逻辑，因为 @theme 内部不支持复杂的媒体查询嵌套 */
+:root {
+  --font-p1: 500 88px/100% var(--font-rubik);
+  --font-p2-m: 500 40px/100% var(--font-rubik);
+  --font-p2-l: 300 40px/100% var(--font-rubik);
+  --font-p3: 500 20px/120% var(--font-rubik);
+  --font-p4: 500 18px/100% var(--font-rubik);
+  --font-p5: 400 14px/150% var(--font-rubik);
+  --font-p6: 400 20px/150% var(--font-rubik);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --font-p1: 500 144px/100% var(--font-rubik);
+    --font-p2-m: 500 64px/100% var(--font-rubik);
+    --font-p2-l: 300 64px/100% var(--font-rubik);
+    --font-p3: 500 36px/120% var(--font-rubik);
+    --font-p4: 500 28px/100% var(--font-rubik);
+    --font-p5: 500 24px/150% var(--font-rubik);
+  }
+}
+
+/* --- Custom Utilities --- */
+@utility text-preset1 {
+  font: var(--font-p1);
+}
+@utility text-preset2-medium {
+  font: var(--font-p2-m);
+}
+@utility text-preset2-light {
+  font: var(--font-p2-l);
+}
+@utility text-preset3 {
+  font: var(--font-p3);
+}
+@utility text-preset4 {
+  font: var(--font-p4);
+}
+@utility text-preset5 {
+  font: var(--font-p5);
+}
+@utility text-preset6 {
+  font: var(--font-p6);
+}
+
+/* --- Base Reset --- */
+@layer base {
+  html,
+  body {
+    @apply antialiased font-rubik;
+    background-color: var(--color-white);
+    color: var(--color-blue-950);
+  }
+
+  #root {
+    @apply min-h-svh flex flex-col;
+  }
+}
