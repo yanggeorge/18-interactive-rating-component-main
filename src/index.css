@@ -1,7 +1,10 @@
-@import "tailwindcss";
-
+/* 1. 先导入 Google Fonts（必须最前！） */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
 
+/* 2. 然后导入 Tailwind v4 */
+@import "tailwindcss";
+
+/* 3. 定义主题变量（颜色、间距、字体等） */
 @theme {
   /* --- Colors --- */
   /* v4 会自动生成 bg-grey-50, text-blue-950 等 */
