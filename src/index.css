@@ -48,29 +48,29 @@
   --spacing-1600: 8rem;
 
   /* --- Default Font --- */
-  --font-rubik: "Rubik", sans-serif;
+  --font-default: "Rubik", sans-serif;
 }
 
 /* --- Typography Logic --- */
 /* 保持在 :root 中处理响应式逻辑，因为 @theme 内部不支持复杂的媒体查询嵌套 */
 :root {
-  --font-p1: 500 88px/100% var(--font-rubik);
-  --font-p2-m: 500 40px/100% var(--font-rubik);
-  --font-p2-l: 300 40px/100% var(--font-rubik);
-  --font-p3: 500 20px/120% var(--font-rubik);
-  --font-p4: 500 18px/100% var(--font-rubik);
-  --font-p5: 400 14px/150% var(--font-rubik);
-  --font-p6: 400 20px/150% var(--font-rubik);
+  --font-p1: 500 88px/100% var(--font-default);
+  --font-p2-m: 500 40px/100% var(--font-default);
+  --font-p2-l: 300 40px/100% var(--font-default);
+  --font-p3: 500 20px/120% var(--font-default);
+  --font-p4: 500 18px/100% var(--font-default);
+  --font-p5: 400 14px/150% var(--font-default);
+  --font-p6: 400 20px/150% var(--font-default);
 }
 
 @media (min-width: 768px) {
   :root {
-    --font-p1: 500 144px/100% var(--font-rubik);
-    --font-p2-m: 500 64px/100% var(--font-rubik);
-    --font-p2-l: 300 64px/100% var(--font-rubik);
-    --font-p3: 500 36px/120% var(--font-rubik);
-    --font-p4: 500 28px/100% var(--font-rubik);
-    --font-p5: 500 24px/150% var(--font-rubik);
+    --font-p1: 500 144px/100% var(--font-default);
+    --font-p2-m: 500 64px/100% var(--font-default);
+    --font-p2-l: 300 64px/100% var(--font-default);
+    --font-p3: 500 36px/120% var(--font-default);
+    --font-p4: 500 28px/100% var(--font-default);
+    --font-p5: 500 24px/150% var(--font-default);
   }
 }
 
@@ -101,9 +101,9 @@
 @layer base {
   html,
   body {
-    @apply antialiased font-rubik;
+    @apply antialiased font-default;
     background-color: var(--color-white);
-    color: var(--color-blue-950);
+    color: var(--color-black);
   }
 
   #root {
