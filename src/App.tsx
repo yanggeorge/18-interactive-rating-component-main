@@ -1,5 +1,3 @@
-import "./App.scss";
-
 export type Stage = "index" | "quiz" | "final";
 
 function App() {
