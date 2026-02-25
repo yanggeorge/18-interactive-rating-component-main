@@ -1,7 +1,7 @@
 import IconStart from "@/assets/icons/icon-star.svg?react";
 const Card = () => {
   return (
-    <div className="p-6 flex flex-col gap-6 items-start bg-grey-950 rounded-2xl">
+    <div className="w-81.75 h-90 p-6 flex flex-col gap-6 items-start bg-grey-950 rounded-2xl">
       <div className="rounded-full bg-grey-900 h-10 w-10 grid place-items-center">
         <IconStart />
       </div>
@@ -12,12 +12,12 @@ const Card = () => {
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <div className="flex gap-4">
+        <div className="flex gap-4 self-center">
           {[1, 2, 3, 4, 5].map((item) => {
             return (
               <button
                 key={item}
-                className="grid place-items-center h-10 w-10 rounded-full bg-grey-900 text-grey-500 text-preset5-bold"
+                className="grid place-items-center h-10.5 w-10.5 rounded-full bg-grey-900 text-grey-500 text-preset5-bold"
               >
                 {item}
               </button>

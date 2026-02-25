@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <DevTools />
-      <main className="flex-1 grid place-items-center w-full bg-black">
+      <main className="flex-1 grid place-items-center bg-black">
         {score === null && <Card />}
         {score && <Final />}
       </main>
