@@ -30,28 +30,30 @@ const Card = () => {
           is appreciated to help us improve our offering!
         </p>
         <div className="flex gap-4 self-center md:gap-6">
-          {[1, 2, 3, 4, 5].map((item) => {
+          {[1, 2, 3, 4, 5].map((num) => {
             return (
               <button
-                key={item}
+                key={num}
                 className={cn(
                   // 1. 基础布局：固定宽高、圆角、居中、字体
                   "flex items-center justify-center h-10.5 w-10.5 rounded-full typography-5-bold transition-colors cursor-pointer",
-
+                  "rating-circle",
                   // 2. 视觉修正：消除行高、间距干扰，并向下微调 2px (pt-0.5)
                   "leading-none tracking-normal pt-0.5",
                   "md:h-12.75 md:w-12.75 md:typography-3",
 
                   // 3. 状态颜色：根据是否选中切换
-                  item === value
+                  num === value
                     ? "bg-white text-grey-900"
                     : "bg-grey-900 text-grey-500 hover:bg-orange-500 hover:text-grey-900",
                 )}
                 onClick={() => {
-                  setValue(item);
+                  setValue(num);
                 }}
+                aria-label={`Rate ${num} out of 5`}
+                aria-pressed={value === num}
               >
-                <span>{item}</span>
+                <span>{num}</span>
               </button>
             );
           })}
@@ -61,9 +63,11 @@ const Card = () => {
       <button
         className={cn(
           "w-full h-11.25 p-4 grid place-items-center text-grey-950 typography-5-bold rounded-3xl cursor-pointer",
+          "rating-circle",
           value === 0 ? "bg-orange-500" : "bg-white",
         )}
         onClick={handleSubmit}
+        aria-label={`Select rating ${value}`}
       >
         SUBMIT
       </button>

@@ -87,6 +87,9 @@
   line-height: 22px;
   letter-spacing: 0px;
 }
+@utility rating-circle {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black;
+}
 
 /* 5. 基础样式重置 */
 @layer base {
