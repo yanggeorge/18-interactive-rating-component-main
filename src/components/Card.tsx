@@ -22,8 +22,8 @@ const Card = () => {
       </div>
 
       <div className="flex flex-col gap-4">
-        <h1 className="text-white preset-2">How did we do?</h1>
-        <p className="text-grey-500 preset-5-reg">
+        <h1 className="text-white typography-2">How did we do?</h1>
+        <p className="text-grey-500 typography-5-reg">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
@@ -34,7 +34,7 @@ const Card = () => {
                 key={item}
                 className={cn(
                   // 1. 基础布局：固定宽高、圆角、居中、字体
-                  "flex items-center justify-center h-10.5 w-10.5 rounded-full preset-5-bold transition-colors cursor-pointer",
+                  "flex items-center justify-center h-10.5 w-10.5 rounded-full typography-5-bold transition-colors cursor-pointer",
 
                   // 2. 视觉修正：消除行高、间距干扰，并向下微调 2px (pt-0.5)
                   "leading-none tracking-normal pt-0.5",
@@ -57,7 +57,7 @@ const Card = () => {
 
       <button
         className={cn(
-          "w-full h-11.25 p-4 grid place-items-center text-grey-950 preset-5-bold rounded-3xl cursor-pointer",
+          "w-full h-11.25 p-4 grid place-items-center text-grey-950 typography-5-bold rounded-3xl cursor-pointer",
           value === 0 ? "bg-orange-500" : "bg-white",
         )}
         onClick={handleSubmit}
