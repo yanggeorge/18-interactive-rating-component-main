@@ -46,37 +46,37 @@
 }
 
 /* 4. 定义 Utility 类名 */
-@utility text-preset1 {
+@utility preset-1 {
   font: var(--font-p1);
   letter-spacing: 0px;
 }
-@utility text-preset2 {
+@utility preset-2 {
   font: var(--font-p2);
   letter-spacing: 0px;
 }
-@utility text-preset3 {
+@utility preset-3 {
   font: var(--font-p3);
   letter-spacing: 0.2px;
 }
 
-@utility text-preset4-bold {
+@utility preset-4-bold {
   font: var(--font-p4-bold);
   letter-spacing: 2px;
 }
-@utility text-preset4-reg {
+@utility preset-4-reg {
   font: var(--font-p4-reg);
   letter-spacing: 0px;
 }
 
-@utility text-preset5-bold {
+@utility preset-5-bold {
   font: var(--font-p5-bold);
   letter-spacing: 1.87px;
 }
-@utility text-preset5-semi {
+@utility preset-5-semi {
   font: var(--font-p5-semi);
   letter-spacing: 0.17px;
 }
-@utility text-preset5-reg {
+@utility preset-5-reg {
   font: var(--font-p5-reg);
   letter-spacing: 0px;
 }
