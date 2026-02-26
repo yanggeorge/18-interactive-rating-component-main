@@ -7,14 +7,13 @@
   /* --- Colors --- */
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-orange-500: hsl(25, 97%, 53%); /* #fc7614 */
+  --color-orange-500: hsl(25, 97%, 53%);
 
-  --color-grey-500: hsl(217, 12%, 63%); /* #969fad */
-  --color-grey-900: hsl(213, 19%, 18%); /* #262e38 */
-  --color-grey-950: hsl(216, 12%, 8%); /* #131518 */
+  --color-grey-500: hsl(217, 12%, 63%);
+  --color-grey-900: hsl(213, 19%, 18%);
+  --color-grey-950: hsl(216, 12%, 8%);
 
   /* --- Spacing --- */
-  /* 将 100 -> 8px, 200 -> 16px 等精确映射 */
   --spacing-0: 0px;
   --spacing-100: 8px;
   --spacing-200: 16px;
@@ -28,56 +27,64 @@
   --font-default: "Overpass", sans-serif;
 }
 
-/* 3. Typography Logic (基于你的 JSON 预设) */
+/* 3. Typography Logic - 核心拆分点 */
 :root {
-  /* 使用 CSS 简写属性: weight size/line-height family */
-  --font-p1: 700 28px/35px var(--font-default);
-  --font-p2: 700 24px/30px var(--font-default);
-  --font-p3: 700 16px/24px var(--font-default);
-
-  /* P4 系列 */
-  --font-p4-bold: 700 15px/19px var(--font-default);
-  --font-p4-reg: 400 15px/24px var(--font-default);
-
-  /* P5 系列 */
-  --font-p5-bold: 700 14px/18px var(--font-default);
-  --font-p5-semi: 600 14px/24px var(--font-default);
-  --font-p5-reg: 400 14px/22px var(--font-default);
+  /* 定义不含行高的基础字体变量 */
+  --font-p1-base: 700 28px var(--font-default);
+  --font-p2-base: 700 24px var(--font-default);
+  --font-p3-base: 700 16px var(--font-default);
+  --font-p4-base: 15px var(--font-default); /* P4 公用大小 */
+  --font-p5-base: 14px var(--font-default); /* P5 公用大小 */
 }
 
 /* 4. 定义 Utility 类名 */
+/* P1 */
 @utility typography-1 {
-  font: var(--font-p1);
+  font: var(--font-p1-base);
+  line-height: 35px;
   letter-spacing: 0px;
 }
+
+/* P2 */
 @utility typography-2 {
-  font: var(--font-p2);
+  font: var(--font-p2-base);
+  line-height: 30px;
   letter-spacing: 0px;
 }
+
+/* P3 */
 @utility typography-3 {
-  font: var(--font-p3);
+  font: var(--font-p3-base);
+  line-height: 24px;
   letter-spacing: 0.2px;
 }
 
+/* P4 系列 */
 @utility typography-4-bold {
-  font: var(--font-p4-bold);
+  font: 700 var(--font-p4-base);
+  line-height: 19px;
   letter-spacing: 2px;
 }
 @utility typography-4-reg {
-  font: var(--font-p4-reg);
+  font: 400 var(--font-p4-base);
+  line-height: 24px;
   letter-spacing: 0px;
 }
 
+/* P5 系列 */
 @utility typography-5-bold {
-  font: var(--font-p5-bold);
+  font: 700 var(--font-p5-base);
+  line-height: 18px;
   letter-spacing: 1.87px;
 }
 @utility typography-5-semi {
-  font: var(--font-p5-semi);
+  font: 600 var(--font-p5-base);
+  line-height: 24px;
   letter-spacing: 0.17px;
 }
 @utility typography-5-reg {
-  font: var(--font-p5-reg);
+  font: 400 var(--font-p5-base);
+  line-height: 22px;
   letter-spacing: 0px;
 }
 
@@ -85,8 +92,8 @@
 @layer base {
   html,
   body {
-    @apply antialiased font-default;
-    /* Rating Component 通常使用深色背景 */
+    @apply antialiased;
+    font-family: var(--font-default);
     background-color: var(--color-black);
     color: var(--color-white);
   }

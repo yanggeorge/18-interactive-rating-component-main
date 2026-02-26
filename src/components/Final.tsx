@@ -10,7 +10,7 @@ const Final = () => {
       <div>
         <IconThankYou />
       </div>
-      <div className="w-42 h-8 rounded-[22.5px] bg-grey-900 flex justify-center items-center typography-5-reg text-orange-500 leading-none md:w-48.25 md:typography-4-reg">
+      <div className="w-42 h-8 rounded-[22.5px] bg-grey-900 flex justify-center items-center typography-5-reg text-orange-500 leading-none md:w-48.25 md:typography-4-reg md:leading-none">
         You selected {score} out of 5
       </div>
       <div className="flex flex-col items-center gap-4">
